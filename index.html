@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <title>Heroes Marvel</title>
   </head>
   <body>
     <main>
-      <header><h1>Marvel's Person</h1></header>
+      <header><img src="./assets/logo_marvel.png" alt="" /></header>
 
       <form action="">
         <input
@@ -25,49 +32,72 @@
         <div class="list_card">
           <div class="card">
             <div class="box_img">
-              <img src="./assets/ironman.jpeg" alt="" />
+              <img class="img" src="./assets/bruce-banner.jpg" alt="" />
             </div>
+
             <div class="data">
-              <h3>Nome: <span>Tony Stark</span></h3>
-              <h3>alias: <span>Tony Stark</span></h3>
-              <h3>Afiliação: <span>Tony Stark</span></h3>
-              <h3>poderes: <span>Tony Stark</span></h3>
-              <h3>fraquezas: <span>Tony Stark</span></h3>
-              <h3>
-                biografia:
-                <span
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Modi possimus sed, natus ipsam harum sunt nemo, soluta ad,
-                  libero quasi dignissimos ex autem! Et nulla unde accusantium
-                  dolorem inventore voluptatem.</span
-                >
-              </h3>
-              <h3>equipamentos: <span>Tony Stark</span></h3>
-              <h3>Universo: <span>Tony Stark</span></h3>
-              <div class="container_relacionamento">
-                <h3>Relacionamentos:</h3>
-                <div class="content_relacionamento">
-                  <div class="rel_amigos">
-                    <span class="icon">😀</span>
-                    <h4>Amigos</h4>
-                    <p>Cap</p>
-                    <p>Thor</p>
+              <div class="header_name">
+                <h3>Home de Ferro</h3>
+                <h3>(Tony Stark)</h3>
+              </div>
+              <div class="main_data">
+                <div class="container_info">
+                  <div class="box_comp">
+                    <h3>Afiliação:</h3>
+                    <div class="list_comp">
+                      <span>Laser</span>
+                      <span>Raio</span>
+                      <span>Voo</span>
+                    </div>
                   </div>
-                  <div class="rel_inimigos">
-                    <span class="icon">👿</span>
-                    <h4>Inimigos</h4>
-                    <p>Dinamo Escarlate</p>
-                    <p>Chic Negro</p>
+
+                  <div class="box_skill">
+                    <h3>Poderes:</h3>
+                    <div class="list_skill">
+                      <span>Laser</span>
+                      <span>Raio</span>
+                      <span>Voo</span>
+                    </div>
                   </div>
-                  <div class="rel_familiares">
-                    <span class="icon">👨‍👩‍👦‍👦</span>
-                    <h4>Familiares</h4>
-                    <p>Stark</p>
+
+                  <div class="box_freak">
+                    <h3>Fraquezas:</h3>
+                    <div class="list_freak">
+                      <span>Laser</span>
+                      <span>Raio</span>
+                      <span>Voo</span>
+                    </div>
                   </div>
-                  <div class="rel_romanticos">
-                    <span class="icon">💕</span>
-                    <h4>Romântico</h4>
-                    <p>Pepper</p>
+                  <a id="btn-abrir-modal" target="_parent" onclick=""
+                    >Ver mais...</a
+                  >
+                </div>
+
+                <div class="container_relacionamento">
+                  <h3>Relacionamentos:</h3>
+                  <div class="content_relacionamento">
+                    <div class="rel_amigos">
+                      <span class="icon">😀</span>
+                      <h4>Amigos</h4>
+                      <p>Cap</p>
+                      <p>Thor</p>
+                    </div>
+                    <div class="rel_inimigos">
+                      <span class="icon">👿</span>
+                      <h4>Inimigos</h4>
+                      <p>Dinamo Escarlate</p>
+                      <p>Chic Negro</p>
+                    </div>
+                    <div class="rel_familiares">
+                      <span class="icon">👨‍👩‍👦‍👦</span>
+                      <h4>Familiares</h4>
+                      <p>Stark</p>
+                    </div>
+                    <div class="rel_romanticos">
+                      <span class="icon">💕</span>
+                      <h4>Romântico</h4>
+                      <p>Pepper</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -83,6 +113,8 @@
       </p>
     </footer>
 
+    <script src="data.js"></script>
     <script src="index.js"></script>
+    <script src="person.js"></script>
   </body>
 </html>

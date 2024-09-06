@@ -1,5 +1,4 @@
-{
-    "heroes": [
+let data = [
         {
             "nome": "Wanda Maximoff",
             "alias": "Feiticeira Escarlate",
@@ -39,7 +38,8 @@
                     "Doctor Doom"
                 ]
             },
-            "universo": "Marvel-616"
+            "universo": "Marvel-616",
+            "bg": "https://wallpapers.com/images/hd/wanda-maximoff-scarlet-witch-evt29k972vz3ewq5.jpg"
         },
         {
             "nome": "Peter Parker",
@@ -83,7 +83,8 @@
                     "Venom"
                 ]
             },
-            "universo": "Marvel-616"
+            "universo": "Marvel-616",
+            "bg": "./assets/spider-man.jpg"
         },
         {
             "nome": "Tony Stark",
@@ -118,7 +119,8 @@
                     "Obadiah Stane"
                 ]
             },
-            "universo": "Marvel-616"
+            "universo": "Marvel-616",
+            "bg": "https://postergami.com/wp-content/uploads/2022/01/poster-wallpaper-homem-de-ferro-25.jpg"
         },
         {
             "nome": "Thor Odinson",
@@ -158,7 +160,8 @@
                 ]
             },
             "universo": "Marvel-616",
-            "raça": "Asgardiano"
+            "raça": "Asgardiano",
+            "bg": "https://maelstrom-earth.wdfiles.com/local--files/char:thor-odinson/thor-odinson.jpg"
         },
         {
             "nome": "Steve Rogers",
@@ -197,7 +200,8 @@
                 ]
             },
             "universo": "Marvel-616",
-            "origem": "Experimento do Soro do Supersoldado"
+            "origem": "Experimento do Soro do Supersoldado",
+            "bg": "https://wallpaper4k.top/wp-content/uploads/2023/09/capitao-america-wallpaper-4k-3241-scaled.jpg"
         },
         {
             "nome": "Bruce Banner",
@@ -233,7 +237,8 @@
                 ]
             },
             "universo": "Marvel-616",
-            "origem": "Exposição à radiação gama"
+            "origem": "Exposição à radiação gama",
+            "bg": "https://images4.alphacoders.com/588/588373.jpg"
         },
         {
             "nome": "Natasha Romanoff",
@@ -275,7 +280,8 @@
                 ]
             },
             "universo": "Marvel-616",
-            "origem": "Programa de treinamento da Viúva Negra"
+            "origem": "Programa de treinamento da Viúva Negra",
+            "bg": "https://wallpapers.com/images/featured/viuva-negra-4k-696vbesvgu5c2hsh.jpg"
         },
         {
             "nome": "Clint Barton",
@@ -310,71 +316,14 @@
                 ]
             },
             "universo": "Marvel-616",
-            "origem": "Treinamento autodidata e com o Homem de Ferro"
-        },
-        {
-            "nome": "Bobbi Morse",
-            "alias": [
-                "Agente 23",
-                "Mockingbird"
-            ],
-            "afiliacoes": "S.H.I.E.L.D., Vingadores",
-            "poderes": "Mestre em artes marciais, Acrobata",
-            "fraquezas": "Dependência de suas armas",
-            "primeiraAparicao": "Astonishing Tales #2",
-            "biografia": "Ex-agente da S.H.I.E.L.D. com habilidades em combate corpo a corpo e espionagem, Bobbi Morse é uma aliada confiável dos Vingadores.",
-            "equipamentos": "Bastões elétricos, Várias armas",
-            "relacionamentos": {
-                "amigos": [
-                    "Hawkeye",
-                    "Lance Hunter",
-                    "Vingadores"
-                ],
-                "inimigos": "Hydra"
-            },
-            "universo": "Marvel-616",
-            "origem": "Programa de treinamento da S.H.I.E.L.D."
-        },
-        {
-            "nome": "Erika Sandquist",
-            "alias": "Harpia",
-            "afiliacoes": "Vingadores da Costa Oeste, Thunderbolts",
-            "poderes": "Asas que permitem voar, Super força, Garras",
-            "fraquezas": "Dependência das asas para voar",
-            "primeiraAparicao": "Avengers West Coast #46",
-            "biografia": "Cientista que experimentou em si mesma um soro que lhe deu asas e super força, Erika Sandquist se tornou a Harpia, uma heroína com um forte senso de justiça.",
-            "equipamentos": "Traje de voo",
-            "relacionamentos": {
-                "amigos": "Vingadores da Costa Oeste",
-                "inimigos": "Criminosos"
-            },
-            "universo": "Marvel-616",
-            "origem": "Experimento científico"
-        },
-        {
-            "nome": "Bucky Barnes",
-            "alias": "Soldado Invernal",
-            "afiliacoes": "Vingadores, Wakanda",
-            "poderes": "Braço protético com diversas funções, Mestre em combate corpo a corpo",
-            "fraquezas": "Programação mental, Conflitos de identidade",
-            "primeiraAparicao": "Captain America Comics #1",
-            "biografia": "Melhor amigo de Steve Rogers, Bucky Barnes foi dado como morto durante a Segunda Guerra Mundial, mas foi resgatado pela Hydra e transformado em um assassino. Após ser libertado do controle da Hydra, ele se juntou aos Vingadores.",
-            "equipamentos": "Braço protético",
-            "relacionamentos": {
-                "amigos": [
-                    "Steve Rogers",
-                    "Sam Wilson"
-                ],
-                "inimigos": "Hydra"
-            },
-            "universo": "Marvel-616",
-            "origem": "Experimento do Soldado Invernal"
+            "origem": "Treinamento autodidata e com o Homem de Ferro",
+            "bg": "https://poltronanerd.com.br/wp-content/uploads/2017/08/gavi%C3%A3o.jpg"
         },
         {
             "nome": "Maria Hill",
             "alias": "Agente 13",
             "afiliacoes": "S.H.I.E.L.D., Vingadores",
-            "poderes": "Mestre em artes marciais, Especialista em espionagem",
+            "poderes": ["Mestre em artes marciais", "Especialista em espionagem"],
             "fraquezas": "Dependência de tecnologia",
             "primeiraAparicao": "Daredevil #261",
             "biografia": "Uma agente de campo da S.H.I.E.L.D. com habilidades excepcionais em combate e liderança, Maria Hill é uma das figuras mais importantes da organização.",
@@ -386,26 +335,26 @@
                 "inimigos": "Hydra"
             },
             "universo": "Marvel-616",
-            "origem": "Programa de treinamento da S.H.I.E.L.D."
+            "origem": "Programa de treinamento da S.H.I.E.L.D.",
+             "bg": "https://wallpapers.com/images/hd/maria-hill-1920-x-1080-wallpaper-az7loa2pxroilsz9.jpg"
         },
-        {
-            "nome": "Nicholas Joseph Fury",
-            "alias": "Nick Fury",
-            "afiliacoes": "S.H.I.E.L.D.",
-            "poderes": "Liderança, Estratégias militares, Experiência em combate",
-            "fraquezas": "Idade, Perda de um olho",
-            "primeiraAparicao": "Sgt. Fury and his Howling Commandos #1",
-            "biografia": "Veterano da Segunda Guerra Mundial, fundou e liderou a S.H.I.E.L.D., uma organização dedicada à proteção global. É conhecido por sua inteligência, experiência e lealdade.",
-            "equipamentos": "Olho biônico, Armas de fogo",
-            "relacionamentos": {
-                "amigos": [
-                    "Steve Rogers",
-                    "Maria Hill"
-                ],
-                "inimigos": "Hydra, Red Skull"
-            },
-            "universo": "Marvel-616",
-            "origem": "Soldado da Segunda Guerra Mundial"
-        }
+        // {
+        //     "nome": "Nicholas Joseph Fury",
+        //     "alias": "Nick Fury",
+        //     "afiliacoes": "S.H.I.E.L.D.",
+        //     "poderes": "Liderança, Estratégias militares, Experiência em combate",
+        //     "fraquezas": "Idade, Perda de um olho",
+        //     "primeiraAparicao": "Sgt. Fury and his Howling Commandos #1",
+        //     "biografia": "Veterano da Segunda Guerra Mundial, fundou e liderou a S.H.I.E.L.D., uma organização dedicada à proteção global. É conhecido por sua inteligência, experiência e lealdade.",
+        //     "equipamentos": "Olho biônico, Armas de fogo",
+        //     "relacionamentos": {
+        //         "amigos": [
+        //             "Steve Rogers",
+        //             "Maria Hill"
+        //         ],
+        //         "inimigos": "Hydra, Red Skull"
+        //     },
+        //     "universo": "Marvel-616",
+        //     "origem": "Soldado da Segunda Guerra Mundial"
+        // }
     ]
-}
