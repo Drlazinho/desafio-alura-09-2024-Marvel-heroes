@@ -18,7 +18,7 @@ let data = [
                 "Dependência de seus poderes"
             ],
             "primeiraAparicao": "X-Men #4",
-            "biografia": "...",
+            "biografia": "A Feiticeira Escarlate é um personagem complexo, que oscila entre o heroísmo e a vilania. Seus poderes a tornam uma força a ser considerada, mas também a colocam em uma posição de grande responsabilidade e perigo. Ao longo dos anos, ela se tornou um membro importante dos Vingadores, mas também enfrentou momentos de isolamento e conflito interno.",
             "equipamentos": [
                 "Varinha"
             ],
@@ -27,7 +27,7 @@ let data = [
                     "Magneto (pai adotivo)",
                     "Pietro Maximoff (Mercúrio)"
                 ],
-                "românticos": [
+                "romanticos": [
                     "Visão"
                 ],
                 "amigos": [
@@ -43,7 +43,7 @@ let data = [
         },
         {
             "nome": "Peter Parker",
-            "alias": "Spider-Man",
+            "alias": "Spider-Man | Homem-aranha",
             "afiliacoes": [
                 "Vingadores",
                 "Defensores"
@@ -69,7 +69,7 @@ let data = [
                     "May Parker (tia)",
                     "Ben Parker (tio falecido)"
                 ],
-                "românticos": [
+                "romanticos": [
                     "Mary Jane Watson",
                     "Gwen Stacy"
                 ],
@@ -117,7 +117,11 @@ let data = [
                 "inimigos": [
                     "Mandarim",
                     "Obadiah Stane"
-                ]
+                ],
+                "familiares": [
+                   
+                ],
+                "romanticos": ["Pepper Potts"]
             },
             "universo": "Marvel-616",
             "bg": "https://postergami.com/wp-content/uploads/2022/01/poster-wallpaper-homem-de-ferro-25.jpg"
@@ -157,7 +161,8 @@ let data = [
                     "Loki",
                     "Hela",
                     "Surtur"
-                ]
+                ],
+                "romanticos": ["Sif", "Jane Foster"]
             },
             "universo": "Marvel-616",
             "raça": "Asgardiano",
@@ -191,12 +196,15 @@ let data = [
                     "Tony Stark",
                     "Natasha Romanoff"
                 ],
-                "românticos": [
+                "romanticos": [
                     "Peggy Carter"
                 ],
                 "inimigos": [
                     "Red Skull",
                     "Hydra"
+                ],
+                "familiares": [
+
                 ]
             },
             "universo": "Marvel-616",
@@ -234,6 +242,9 @@ let data = [
                 ],
                 "familiares": [
                     "Betty Ross"
+                ],
+                "romanticos": [
+                    "Betty Ross"
                 ]
             },
             "universo": "Marvel-616",
@@ -270,13 +281,16 @@ let data = [
                     "Steve Rogers",
                     "Bruce Banner"
                 ],
-                "românticos": [
+                "romanticos": [
                     "Clint Barton",
                     "Bruce Banner"
                 ],
                 "inimigos": [
                     "General Dreykov",
                     "Treinadores Vermelhos"
+                ],
+                "familiares": [
+
                 ]
             },
             "universo": "Marvel-616",
@@ -313,6 +327,11 @@ let data = [
                 "inimigos": [
                     "Ronin",
                     "Pistoleiro"
+                ],
+                "familiares": [
+                    " Francis Barton"
+                ],
+                "romanticos": [
                 ]
             },
             "universo": "Marvel-616",
@@ -332,7 +351,9 @@ let data = [
                 "amigos": ["Nick Fury",
                 "Steve Rogers",
                 "Natasha Romanoff"],
-                "inimigos": "Hydra"
+                "inimigos": ["Hydra",],
+                "familiares": [],
+                "romanticos": [],
             },
             "universo": "Marvel-616",
             "origem": "Programa de treinamento da S.H.I.E.L.D.",

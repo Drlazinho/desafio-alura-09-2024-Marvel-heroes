@@ -1,106 +1,51 @@
-console.log(data);
-
 const listCard = document.querySelector(".list_card");
 const card = document.createElement("div");
 card.classList.add("card");
 
-function mapearCards() {
-  data.forEach((person) => {
-    listCard.appendChild(criarCardPersonagemInner(person));
+function mapearCards(value) {
+    listCard.innerHTML = "";
+    console.log(value)
+  if (!value) {
+    data.forEach((person) => {
+      listCard.appendChild(criarCardPersonagemInner(person));
+    });
+  }
 
-    console.log(person.nome);
-  });
-}
-
-function criarCardPersonagem(personagem) {
-  const card = document.createElement("div");
-  card.classList.add("card");
-
-  // card.addEventListener('click', () => {
-  //     localStorage.setItem('personagem', JSON.stringify(personagem));
-  //     window.location.href = './person.html';
-  // })
-
-  // Criar a seção da imagem
-  const boxImg = document.createElement("div");
-  boxImg.classList.add("box_img");
-  const img = document.createElement("img");
-
-  img.src = `./assets/${personagem.nome
-    .toLowerCase()
-    .replace(/\s+/g, "-")}.jpg`; // Adaptar o caminho da imagem
-  console.log(img.src);
-
-  img.alt = personagem.nome;
-  img.classList.add("img");
-  boxImg.appendChild(img);
-
-  // Criar a seção de dados
-  const data = document.createElement("div");
-  data.classList.add("data");
-
-  //Header da Data
-  const header_name = document.createElement("div");
-  header_name.classList.add("header_name");
-  const nome = document.createElement("h3");
-  const nome2 = document.createElement("h3");
-  nome.textContent = personagem.nome;
-  nome.textContent = personagem.alias;
-
-  header_name.appendChild();
-
-  // Criar os elementos de dados
-  const criarElemento = (label, valor) => {
-    const elemento = document.createElement("h3");
-    elemento.innerHTML = `${label}: <span>${valor}</span>`;
-    return elemento;
-  };
-
-  data.appendChild(criarElemento("Nome", personagem.nome));
-  data.appendChild(criarElemento("Alias", personagem.alias));
-  // ... adicionar outros elementos de dados
-
-  // Criar a seção de poderes
-  const boxSkill = document.createElement("div");
-  boxSkill.classList.add("box_skill");
-  const listaPoderes = document.createElement("div");
-  listaPoderes.classList.add("list_skill");
-  personagem.poderes.forEach((poder) => {
-    const span = document.createElement("span");
-    span.textContent = poder;
-    listaPoderes.appendChild(span);
-  });
-  boxSkill.appendChild(criarElemento("Poderes"));
-  boxSkill.appendChild(listaPoderes);
-  data.appendChild(boxSkill);
-
-  // Criar a seção de relacionamentos
-  const containerRelacionamento = document.createElement("div");
-  containerRelacionamento.classList.add("container_relacionamento");
-  // ... criar elementos para cada tipo de relacionamento
-  data.appendChild(containerRelacionamento);
-
-  card.appendChild(boxImg);
-  card.appendChild(data);
-
-  return card;
+  if (value) {
+    console.log(value)
+    value.forEach((person) => {
+        listCard.appendChild(criarCardPersonagemInner(person));
+      });
+    }
 }
 
 function gerarLista(list) {
-    const fragment = document.createDocumentFragment();
-    let arrSpan = []
-    list.forEach((item) => {
-        arrSpan.push(`<span>${item}</span>`)
-    })
+  let arrSpan = [];
+  list.forEach((item) => {
+    arrSpan.push(`<span>${item}</span>`);
+  });
 
-    const format = arrSpan.join('')
-    return format
-    console.log(format)
-  }
+  const format = arrSpan.join("");
+  return format;
+}
+function gerarListaRel(list) {
+  let arrSpan = [];
+  list.forEach((item) => {
+    arrSpan.push(`<p>${item}</p>`);
+  });
+
+  const format = arrSpan.join("");
+  return format;
+}
 
 function criarCardPersonagemInner(personagem) {
   const card = document.createElement("div");
   card.classList.add("card");
+
+  card.addEventListener("click", () => {
+    localStorage.setItem("personagem", JSON.stringify(personagem));
+    window.location.href = "./person.html";
+  });
 
   card.innerHTML = `
             <div class="box_img">
@@ -136,7 +81,7 @@ function criarCardPersonagemInner(personagem) {
                     </div>
                   </div>
                   <a id="btn-abrir-modal" target="_parent" onclick=""
-                    >Ver mais...</a
+                    >Clique no card para ver mais</a
                   >
                 </div>
 
@@ -146,24 +91,33 @@ function criarCardPersonagemInner(personagem) {
                     <div class="rel_amigos">
                       <span class="icon">😀</span>
                       <h4>Amigos</h4>
-                      <p>Cap</p>
-                      <p>Thor</p>
+                    ${gerarListaRel(personagem.relacionamentos.amigos)}
+
                     </div>
                     <div class="rel_inimigos">
                       <span class="icon">👿</span>
                       <h4>Inimigos</h4>
-                      <p>Dinamo Escarlate</p>
-                      <p>Chic Negro</p>
+                                     ${gerarListaRel(
+                                       personagem.relacionamentos.inimigos
+                                     )}
+
                     </div>
                     <div class="rel_familiares">
                       <span class="icon">👨‍👩‍👦‍👦</span>
                       <h4>Familiares</h4>
-                      <p>Stark</p>
+                                                        ${gerarListaRel(
+                                                          personagem
+                                                            .relacionamentos
+                                                            .familiares
+                                                        )}
+
                     </div>
                     <div class="rel_romanticos">
                       <span class="icon">💕</span>
                       <h4>Romântico</h4>
-                      <p>Pepper</p>
+                                     ${gerarListaRel(
+                                       personagem.relacionamentos.romanticos
+                                     )}
                     </div>
                   </div>
                 </div>
@@ -171,18 +125,58 @@ function criarCardPersonagemInner(personagem) {
             </div>
     `;
 
-
-    const listComp = card.querySelector('.list_comp');
+  const listComp = card.querySelector(".list_comp");
 
   return card;
 }
 
-// Função para renderizar todos os personagens
-function renderizarPersonagens(personagens) {
-  const container = document.getElementById("container-personagens");
-  personagens.forEach((personagem) => {
-    container.appendChild(criarCardPersonagem(personagem));
+const searchInput = document.querySelector("input");
+const searchButton = document.querySelector("#submit");
+
+// ... (rest of your code)
+
+searchButton.addEventListener("onsubmit", (e) => {
+  e.preventDefault();
+  const searchTerm = searchInput.value.toLowerCase();
+  const filteredData = data.filter((person) => {
+    return (
+      person.nome.toLowerCase().includes(searchTerm) ||
+      person.alias.toLowerCase().includes(searchTerm)
+    );
   });
+
+  listCard.innerHTML = "";
+  mapearCards(filteredData);
+});
+
+function pesquisar(event) {
+  // Obter o valor digitado
+  const termoBusca = document.getElementById("campo-de-busca").value; // Substitua "campo-de-busca" pelo ID correto do seu input
+  event.preventDefault(); // Impede o comportamento padrão
+
+  const resultados = data.filter((personagem) => {
+    const nomeMinusculo = personagem.nome.toLowerCase();
+    const aliasMinusculo = personagem.alias.toLowerCase();
+    const termoBuscaMinusculo = termoBusca.toLowerCase();
+    return (
+      nomeMinusculo.includes(termoBuscaMinusculo) ||
+      aliasMinusculo.includes(termoBuscaMinusculo)
+    );
+  });
+
+  // Realizar a busca (simplificada)
+  mapearCards(resultados);
+  // Mostrar os resultados (exemplo)
+  const resultadoElement = document.getElementById("resultados");
+  // resultadoElement.innerHTML = ""; // Limpa os resultados anteriores
+
+  console.log(termoBusca);
 }
 
+function limpar(e) {
+    e.preventDefault();
+    document.getElementById("campo-de-busca").value = ""; // Substitua "campo-de-busca" pelo ID correto do seu input
+
+    mapearCards();
+}
 mapearCards();

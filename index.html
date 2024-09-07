@@ -22,15 +22,18 @@
         <input
           type="text"
           name=""
-          id=""
+          id="campo-de-busca"
           placeholder="Digite um personagem do UCM"
         />
-        <button type="submit">Pesquisar</button>
+        <div class="box_buttons">
+          <button id="submit" type="submit" onclick="pesquisar(event)">Pesquisar</button>
+          <button id="clear" type="submit" onclick="limpar(event)">Limpar filtro</button>
+        </div>
       </form>
 
       <section>
         <div class="list_card">
-          <div class="card">
+          <!-- <div class="card">
             <div class="box_img">
               <img class="img" src="./assets/bruce-banner.jpg" alt="" />
             </div>
@@ -68,7 +71,7 @@
                       <span>Voo</span>
                     </div>
                   </div>
-                  <a id="btn-abrir-modal" target="_parent" onclick=""
+                  <a class="#more" target="_parent" onclick=""
                     >Ver mais...</a
                   >
                 </div>
@@ -102,7 +105,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
     </main>
