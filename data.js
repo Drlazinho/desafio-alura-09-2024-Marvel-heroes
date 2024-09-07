@@ -136,7 +136,7 @@ let data = [
                 "Manipulação do clima",
                 "Mjolnir"
             ],
-            "fraquezas": "Encantamento de Odin",
+            "fraquezas": ["Encantamento de Odin"],
             "primeiraAparicao": "Journey into Mystery #83",
             "biografia": "Príncipe de Asgard e filho de Odin, Thor é um deus do trovão com poderes cósmicos. Após se provar digno, ele recebeu o martelo Mjolnir e se tornou um defensor da Terra.",
             "equipamentos": [
@@ -322,9 +322,9 @@ let data = [
         {
             "nome": "Maria Hill",
             "alias": "Agente 13",
-            "afiliacoes": "S.H.I.E.L.D., Vingadores",
+            "afiliacoes": ["S.H.I.E.L.D., Vingadores"],
             "poderes": ["Mestre em artes marciais", "Especialista em espionagem"],
-            "fraquezas": "Dependência de tecnologia",
+            "fraquezas": ["Dependência de tecnologia"],
             "primeiraAparicao": "Daredevil #261",
             "biografia": "Uma agente de campo da S.H.I.E.L.D. com habilidades excepcionais em combate e liderança, Maria Hill é uma das figuras mais importantes da organização.",
             "equipamentos": "Várias armas, Dispositivos tecnológicos",
