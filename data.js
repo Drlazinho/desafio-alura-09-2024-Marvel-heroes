@@ -42,6 +42,51 @@ let data = [
             "bg": "https://wallpapers.com/images/hd/wanda-maximoff-scarlet-witch-evt29k972vz3ewq5.jpg"
         },
         {
+            "nome": "Stephen Strange",
+            "alias": "Doutor Estranho",
+            "afiliacoes": [
+              "Vingadores",
+              "Mestres das Artes Místicas",
+              "Illuminati"
+            ],
+            "poderes": [
+              "Manipulação da realidade (limitada)",
+              "Teletransporte",
+              "Constructos de energia",
+              "Projeção astral",
+              "Feitiçaria"
+            ],
+            "fraquezas": [
+              "Dependente do Livro dos Vishanti",
+              "Vulnerável a magias mais poderosas"
+            ],
+            "primeiraAparicao": "Strange Tales #110",
+            "biografia": "Stephen Strange era um neurocirurgião arrogante até um acidente destruir suas mãos. Em busca de cura, ele embarca em uma jornada mística e torna-se o Mago Supremo, protegendo a Terra de ameaças dimensionais.",
+            "equipamentos": [
+              "Olho de Agamotto",
+              "Capa da Levitação",
+              "Livro dos Vishanti"
+            ],
+            "relacionamentos": {
+              "familiares": [],
+              "romanticos": [
+                "Cle'a"
+              ],
+              "amigos": [
+                "Wong",
+                "Ancient One",
+                "Mordo"
+              ],
+              "inimigos": [
+                "Dormammu",
+                "Mordo",
+                "Baron Mordo"
+              ]
+            },
+            "universo": "Marvel-616",
+            "bg": "https://segredosdomundo.r7.com/wp-content/uploads/2020/07/doutor-estranho-qual-a-sua-historia-seus-poderes-e-curiosidades.jpg"
+          },
+        {
             "nome": "Peter Parker",
             "alias": "Spider-Man | Homem-aranha",
             "afiliacoes": [
