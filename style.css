@@ -39,21 +39,21 @@ form {
 
 
     input {
-        padding: 1rem;
+        padding: .5rem;
         border-radius: 5px;
         border: 3px solid black;
     }
 
     .box_buttons {
-        margin-top: 1rem;
+        margin-top: .5rem;
         display: flex;
         flex-direction: row;
-        gap: 1rem;
+        gap: .5rem;
     
         button {
             flex: 1;
             outline: none;
-            padding: 1rem;
+            padding: .4rem;
             font-weight: bold;
             background-color: rgb(0, 0, 0);
             border: 2px solid rgb(253, 249, 0);
@@ -103,11 +103,10 @@ section {
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
 
         .box_comp {
             color: yellow;
-
+            overflow: scroll;
             margin-top: 1rem;
             display: flex;
             flex-direction: row;
@@ -134,6 +133,7 @@ section {
             flex-direction: row;
             align-items: center;
             gap: 1rem;
+            overflow: scroll;
         }
 
         .list_skill {
@@ -157,6 +157,8 @@ section {
             flex-direction: row;
             align-items: center;
             gap: 1rem;
+            overflow: scroll;
+
         }
 
         .list_freak {
@@ -257,3 +259,23 @@ footer {
     position: fixed;
 }
 
+@media (max-width: 1250px) {
+    header {
+        padding-block: .85rem;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+    
+        img {
+            height: 50px;
+        }
+    } 
+
+    .card {
+        flex-direction: column;
+
+        .box_img {
+            height: 100px;
+        }
+    }
+}
